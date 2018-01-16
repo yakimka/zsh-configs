@@ -1,0 +1,3 @@
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/bin/virtualenvwrapper.sh
+alias ma="python manage.py"
