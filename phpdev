@@ -1,1 +1,2 @@
+export PATH=$PATH:$HOME/.config/composer/vendor/bin/
 alias art="php artisan"
