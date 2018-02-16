@@ -1,3 +1,10 @@
 alias zshconfig="nano ~/.zshrc"
-alias ntmux="tmux attach || tmux new"
 clncfg () { grep  -v ^\; $1 | grep -v ^$ | grep -v ^\# }
+ntmux () {
+    if [ -z "$1" ]
+    then
+        tmux attach || tmux new
+    else
+        tmux a -t $1 || tmux new -s $1
+    fi
+}
