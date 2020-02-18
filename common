@@ -1,5 +1,9 @@
 alias zshconfig="nano ~/.zshrc"
-clncfg () { grep  -v ^\; $1 | grep -v ^$ | grep -v ^\# }
+
+# print file without comments
+cleancfg () { grep  -v ^\; $1 | grep -v ^$ | grep -v ^\# }
+
+# shortcut for "create or attach to session"
 ntmux () {
     if [ -z "$1" ]
     then
@@ -8,3 +12,12 @@ ntmux () {
         tmux a -t $1 || tmux new -s $1
     fi
 }
+
+# https://superuser.com/questions/480928/is-there-any-command-like-time-but-for-memory-usage
+TIMEFMT='%J   %U  user %S system %P cpu %*E total'$'\n'\
+'avg shared (code):         %X KB'$'\n'\
+'avg unshared (data/stack): %D KB'$'\n'\
+'total (sum):               %K KB'$'\n'\
+'max memory:                %M MB'$'\n'\
+'page faults from disk:     %F'$'\n'\
+'other page faults:         %R'
