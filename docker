@@ -1,0 +1,2 @@
+alias dcr="docker-compose run --rm"
+alias dce="docker-compose exec -it"
