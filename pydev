@@ -1,3 +1,5 @@
+export PATH=~/.local/bin:$PATH
+
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
     source /usr/bin/virtualenvwrapper.sh
