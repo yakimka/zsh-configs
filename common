@@ -1,4 +1,4 @@
-alias zshconfig="nano ~/.zshrc"
+export PATH=~/Scripts:$PATH
 
 # print file without comments
 cleancfg () { grep  -v ^\; $1 | grep -v ^$ | grep -v ^\# }
